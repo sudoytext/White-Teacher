@@ -10,7 +10,7 @@ openai.apiKey = aiApiKey;
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
-const CHANNEL_ID = "1323010837983662155";
+const CHANNEL_ID = "";
 
 async function errorEmbed(text, message) {
     const embed = new MessageEmbed()

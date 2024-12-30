@@ -5,12 +5,12 @@ const axios = require('axios');
 const token = process.env.DISCORD_BOT_TOKEN;
 const aiApiKey = process.env.AI_API_KEY;
 
-const openai = require("openai"); // Importing OpenAI API
+const openai = require("openai");
 openai.apiKey = aiApiKey;
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
-const CHANNEL_ID = "1323010837983662155"; // Channel ID where the bot will listen
+const CHANNEL_ID = "1323010837983662155";
 
 async function errorEmbed(text, message) {
     const embed = new MessageEmbed()
@@ -21,18 +21,18 @@ async function errorEmbed(text, message) {
 
 client.on('messageCreate', async (message) => {
     if (!message.guild || message.author.bot) return;
-    if (message.channel.id !== CHANNEL_ID) return; // Check if the message is from the correct channel
+    if (message.channel.id !== CHANNEL_ID) return;
 
     try {
-        const query = message.content.trim(); // Extract the message content
+        const query = message.content.trim();
         const completion = await openai.createCompletion({
-            model: 'text-davinci-003', // Choose a model (like 'gpt-3.5-turbo' or 'gpt-4')
-            prompt: query, // Send the user query as a prompt
-            max_tokens: 150, // Limit response length
-            temperature: 0.7 // Controls creativity of the response
+            model: 'text-davinci-003',
+            prompt: query,
+            max_tokens: 150,
+            temperature: 0.7
         });
 
-        const aiResponse = completion.data.choices[0].text.trim(); // Extract AI-generated response
+        const aiResponse = completion.data.choices[0].text.trim();
         message.reply(aiResponse); // Send the AI response back to the channel
 
     } catch (error) {

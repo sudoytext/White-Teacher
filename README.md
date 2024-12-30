@@ -1,5 +1,5 @@
 
-# White Teacher Discord Bot
+# White AI discord & Moderation bot
 
 ## Overview
 The **White Teacher Discord Bot** is a powerful bot designed to integrate AI-based responses into your Discord server. It utilizes OpenAI’s GPT model to generate human-like responses based on user queries. This bot can be customized to fit a wide range of use cases, such as interactive Q&A, educational assistance, or general information retrieval.
@@ -14,6 +14,12 @@ The **White Teacher Discord Bot** is a powerful bot designed to integrate AI-bas
 Before running the bot, ensure you have the following:
 - **Discord Bot Token**: Obtain from [Discord Developer Portal](https://discord.com/developers/applications).
 - **OpenAI API Key**: Obtain from [OpenAI](https://beta.openai.com/signup) to use their API.
+
+- Moderation Tools
+Kick & Ban Commands: Admins can kick or ban users with kick and ban commands.
+Role Management: Commands like add, remove, mute, and unmute allow server admins to manage user roles and permissions effectively.
+Message Deletion: The purge command enables admins to delete a bulk of messages for keeping the channel clean.
+Warnings & Logs: Users can be warned using the warn command, and warnings can be purged using purgewarns.
 
 ## Installation
 1. **Clone the Repository**:

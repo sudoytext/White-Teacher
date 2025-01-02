@@ -1,5 +1,5 @@
 
-# White AI discord & Moderation bot
+# White Teacher discord & Moderation bot
 
 ## Overview
 The **White Teacher Discord Bot** is a powerful bot designed to integrate AI-based responses into your Discord server. It utilizes OpenAI’s GPT model to generate human-like responses based on user queries. This bot can be customized to fit a wide range of use cases, such as interactive Q&A, educational assistance, or general information retrieval.

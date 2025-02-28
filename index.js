@@ -33,7 +33,7 @@ client.on('messageCreate', async (message) => {
         });
 
         const aiResponse = completion.data.choices[0].text.trim();
-        message.reply(aiResponse); // Send the AI response back to the channel
+        message.reply(aiResponse);
 
     } catch (error) {
         console.error('Error communicating with OpenAI API:', error);
